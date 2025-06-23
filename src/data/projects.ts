@@ -8,10 +8,10 @@ export const projects: Project[] = [
     students: ["محمود حساني", "وليد بن قبوس", "سلطان باهبري", "محمد الهندي", "ندى العمودي", "عائشة باعشن", "فاتن بن سميدع"],
     supervisor: "د. فائز بازنبور",
     type: "mobile",
-    image: "/projects/pr-1.png", // <--- تم التصحيح هنا
+    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702012/pr-1_hzxv7o.png",
     links: {
-      demo: "/pdf/M1.pdf", // <--- تم التصحيح هنا
-      presentation: "/pdf/P1.pdf" // <--- تم التصحيح هنا
+      demo: "https://drive.google.com/uc?export=view&id=1bqgFfVfKn4AV9tedICdXNuhhid9Zs28_",
+      presentation: "https://drive.google.com/uc?export=view&id=1joArncnSiZPtYCM6KicM8OrzL8o28i5W"
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -22,10 +22,10 @@ export const projects: Project[] = [
     students: ["عبدالله بامسعود", "مشعل العمودي", "بركات الوهيبي", "أحمد الهمس", "صفاء باذيب", "جواهر بن ركيز", "هية عوشان"],
     supervisor: "د. عصام باسليمان",
     type: "web",
-    image: "/projects/pr-2.png", // <--- تم التصحيح هنا
-      links: {
-      demo: "/pdf/M2.pdf", // <--- تم التصحيح هنا
-      presentation: "/pdf/P2.pdf" // <--- تم التصحيح هنا
+    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702044/pr-2_nmmont.png",
+     links: {
+      demo: "https://drive.google.com/uc?export=view&id=1RSBk1ZzWuw9k9qF_VddvE43DnFhWeaNQ",
+      presentation: "https://drive.google.com/file/d/1oIV1WoYG4D_MlRGplPjKwJVvM8Pu5yW6/view?usp=drive_link"
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -36,10 +36,10 @@ export const projects: Project[] = [
     students: ["نظمي باظروس", "محمد بن كوير", "عائض بن ماخش", "أحمد التميمي", "محمد صالح", "ريناد باراس", "مريم بن هامل"],
     supervisor: "د. فايز بازنبور",
     type: "desktop",
-    image: "/projects/pr-3.png", // <--- تم التصحيح هنا
+    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702103/pr-3_dosxvr.png",
       links: {
-      demo: "/pdf/none.jpg", // <--- تم التصحيح هنا
-      presentation: "/pdf/none.jpg" // <--- تم التصحيح هنا
+      demo: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg",
+      presentation: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpgg"
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -50,10 +50,10 @@ export const projects: Project[] = [
     students: ["أحمد بامدحج", "أحمد شوالة", "مروان بن سهيلان", "أمواج النهدي", "أمل الملاح", "أحلام النهدي", "سلمى حمدان", "رهف العمودي"],
     supervisor: "د. عصام باسليمان",
     type: "web",
-    image: "/projects/pr-4.png", // <--- تم التصحيح هنا
+    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702053/pr-4_cfiimd.png",
       links: {
-      demo: "/pdf/M4.pdf", // <--- تم التصحيح هنا
-      presentation: "/pdf/none.jpg" // <--- تم التصحيح هنا
+      demo: "https://drive.google.com/uc?export=view&id=1ohvWLvbnC9q0SptLY2_Nu1o2LVDWVmzK",
+      presentation: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg"
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -64,10 +64,10 @@ export const projects: Project[] = [
     students: ["أماني يعقوب", "حنين بن عتيق", "خديجة حسينون", "تسنيم عريض", "شيماء بامحفوظ"],
     supervisor: "د. فائز بازنبور",
     type: "research",
-    image: "/projects/pr-5.png", // <--- تم التصحيح هنا
-      links: {
-      demo: "/pdf/M5.pdf", // <--- تم التصحيح هنا
-      presentation: "/pdf/P5.pdf" // <--- تم التصحيح هنا
+    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702082/pr-5_ynv0yy.png",
+     links: {
+      demo: "https://drive.google.com/file/d/1QDPPX-yTslU_H6qDzuShwgtVUumVBC96/view?usp=drive_link",
+      presentation: "https://drive.google.com/file/d/1rOpe2HpsqWuIC1W61DWtbp6Z_HLXi5AK/view?usp=drive_link"
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -78,10 +78,10 @@ export const projects: Project[] = [
     students: ["همام الدوعني", "عمر بن سعد", "عمر الخلاقي", "سعيد بابقي", "سعيد باكيلي", "عديلة الوصابي", "نجاة باحميد ", "بشرى باراس", "أخلاص بن سلمة"],
     supervisor: "د. واثق كعويلة",
     type: "research",
-    image: "/projects/pr-6.png", // <--- تم التصحيح هنا
-      links: {
-      demo: "/pdf/none.jpg", // <--- تم التصحيح هنا
-      presentation: "/pdf/none.jpg" // <--- تم التصحيح هنا
+    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702172/pr-6_ctoc8t.png",
+     links: {
+      demo: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg",
+      presentation: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg"
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -92,10 +92,10 @@ export const projects: Project[] = [
     students: ["صالح سويدان", "سالم بن عروة", "أنس مزروع", "ناصر حيابك", "صفاء البطاطي", "حنين باجابر", "شهد دنه", "سلمى الصويل"],
     supervisor: "د. واثق كعويلة",
     type: "research",
-    image: "/projects/pr-7.png", // <--- تم التصحيح هنا
+    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702183/pr-7_y1qhwe.png",
       links: {
-      demo: "/pdf/none.jpg", // <--- تم التصحيح هنا
-      presentation: "/pdf/none.jpg" // <--- تم التصحيح هنا
+      demo: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg",
+      presentation: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg"
     //github: "public/pdf/EduAi.pptx"
     }
   },

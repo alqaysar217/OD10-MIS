@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
       {/* Hero Background Image */}
       <div className="absolute inset-0">
         <img
-          src="public\blog\blog-1.jpg"
+          src="https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701592/blog-1_tjyo4d.jpg"
           alt="دفعة مطور المنظمة"
           className="w-full h-full object-cover opacity-20"
         />

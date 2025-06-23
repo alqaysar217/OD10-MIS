@@ -31,7 +31,7 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="public\blog\blog-6.jpg"
+                  src="https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701626/blog-6_pm7cg1.jpg"
                   alt="دفعة مطور المنظمة"
                   className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700"
                 />

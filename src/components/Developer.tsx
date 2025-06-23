@@ -25,42 +25,42 @@ const Developer: React.FC = () => {
       title: 'موقع دفعة مطور المنظمة',
       description: 'موقع شامل لعرض طلاب إنجازات وذكريات ومسار ومشاريع دفعة مطور المنظمة OD-10',
       tech: 'React, TypeScript, Tailwind CSS',
-      image: 'public/projects/app-1.png',
-      url: 'https://OD10-MIS.vercel.app/' 
+      image: 'https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701927/app-1_zv5kyz.png',
+      url: 'https://od10-mis.vercel.app/' 
     },
     {
       title: 'منصة فيونكة التجارية',
       description: 'منصة ويب لبيع المستلزمات البناتية (أدوات تجميل - مجوهرات - شنط - احذية) في فيونكه ستجد النادر.',
       tech: 'Vue.js, Node.js, MongoDB',
-      image: 'public/projects/app-2.png',
+      image: 'https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701906/app-2_b5vsz6.png',
       url: 'https://fioncah-ecommerce.vercel.app/' 
     },
     {
       title: 'موقع محلات باشعيب للدراجات',
       description: 'موقع الكتروني لبيع الدراجات النارية بانواعها وقطع الغيار والزينة وكل ما يتعلق بالصيانة.',
       tech: 'Html, CSS, Javascript',
-      image: 'public/projects/app-3.png',
+      image: 'https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701919/app-3_ztotoy.png',
       url: 'https://bashaib-ecommerce.vercel.app/' 
     },
     {
       title: 'تطبيق سقيا الخيري',
       description: 'تطبيق سقيا للتبرع للمساجد بالمياة، المنظفات، المناديل، الوجبات يمكنك من خلاله التبرع بكل سهولة.',
       tech: 'React, TypeScript, Tailwind CSS',
-      image: 'public/projects/app-4.png',
+      image: 'https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701935/app-4_jpmpoq.png',
       url: 'https://saqia-charity-app.vercel.app/' 
     },
     {
       title: 'تطبيق سكينة الاسلامي',
       description: 'تطبيق للاستما الى القران، قصص الانبياء، ادعية، احاديث، اذكار، اسئلة دينة، يضم اكثر من 60 قارى.',
       tech: 'Vue.js, Node.js, MongoDB',
-      image: 'public/projects/app-5.png',
+      image: 'https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702021/app-5_dcctsf.png',
       url: 'https://sakina-islam.vercel.app/' 
     },
     {
       title: 'تطبيق العمقي موبايل',
       description: 'يضم فروع الشركة والوكلاء وتواجد 24 ساعة والرخدمات المالية والرسائل والخدمات المتقدمة',
       tech: 'React, TypeScript, Tailwind CSS',
-      image: 'public/projects/app-6.png',
+      image: 'https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702220/app-6_itlayf.png',
       url: 'https://omqi-mobile-app.vercel.app/' 
     }
   ];
@@ -109,7 +109,7 @@ const Developer: React.FC = () => {
                 {/* Profile Image */}
                 <div className="relative h-80 bg-gradient-to-br from-primary-600 to-secondary-600">
                   <img
-                    src="public/leaders/2.png" // تأكد من صحة هذا المسار لصورتك
+                    src="https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701649/1_z6yzyq.png" // تأكد من صحة هذا المسار لصورتك
                     alt="محمود عمر علي حساني"
                     className="w-full h-full object-cover"
                   />
