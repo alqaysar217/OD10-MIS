@@ -8,10 +8,10 @@ export const projects: Project[] = [
     students: ["محمود حساني", "وليد بن قبوس", "سلطان باهبري", "محمد الهندي", "ندى العمودي", "عائشة باعشن", "فاتن بن سميدع"],
     supervisor: "د. فائز بازنبور",
     type: "mobile",
-    image: "public/projects/pr-1.png",
+    image: "/projects/pr-1.png", // <--- تم التصحيح هنا
     links: {
-      demo: "public/pdf/M1.pdf",
-      presentation: "public/pdf/P1.pdf"
+      demo: "/pdf/M1.pdf", // <--- تم التصحيح هنا
+      presentation: "/pdf/P1.pdf" // <--- تم التصحيح هنا
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -22,10 +22,10 @@ export const projects: Project[] = [
     students: ["عبدالله بامسعود", "مشعل العمودي", "بركات الوهيبي", "أحمد الهمس", "صفاء باذيب", "جواهر بن ركيز", "هية عوشان"],
     supervisor: "د. عصام باسليمان",
     type: "web",
-    image: "public/projects/pr-2.png",
-     links: {
-      demo: "public/pdf/M2.pdf",
-      presentation: "public/pdf/P2.pdf"
+    image: "/projects/pr-2.png", // <--- تم التصحيح هنا
+      links: {
+      demo: "/pdf/M2.pdf", // <--- تم التصحيح هنا
+      presentation: "/pdf/P2.pdf" // <--- تم التصحيح هنا
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -36,10 +36,10 @@ export const projects: Project[] = [
     students: ["نظمي باظروس", "محمد بن كوير", "عائض بن ماخش", "أحمد التميمي", "محمد صالح", "ريناد باراس", "مريم بن هامل"],
     supervisor: "د. فايز بازنبور",
     type: "desktop",
-    image: "public/projects/pr-3.png",
+    image: "/projects/pr-3.png", // <--- تم التصحيح هنا
       links: {
-      demo: "public/pdf/none.jpg",
-      presentation: "public/pdf/none.jpg"
+      demo: "/pdf/none.jpg", // <--- تم التصحيح هنا
+      presentation: "/pdf/none.jpg" // <--- تم التصحيح هنا
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -50,10 +50,10 @@ export const projects: Project[] = [
     students: ["أحمد بامدحج", "أحمد شوالة", "مروان بن سهيلان", "أمواج النهدي", "أمل الملاح", "أحلام النهدي", "سلمى حمدان", "رهف العمودي"],
     supervisor: "د. عصام باسليمان",
     type: "web",
-    image: "public/projects/pr-4.png",
+    image: "/projects/pr-4.png", // <--- تم التصحيح هنا
       links: {
-      demo: "public/pdf/M4.pdf",
-      presentation: "public/pdf/none.jpg"
+      demo: "/pdf/M4.pdf", // <--- تم التصحيح هنا
+      presentation: "/pdf/none.jpg" // <--- تم التصحيح هنا
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -64,10 +64,10 @@ export const projects: Project[] = [
     students: ["أماني يعقوب", "حنين بن عتيق", "خديجة حسينون", "تسنيم عريض", "شيماء بامحفوظ"],
     supervisor: "د. فائز بازنبور",
     type: "research",
-    image: "public/projects/pr-5.png",
-     links: {
-      demo: "public/pdf/M5.pdf",
-      presentation: "public/pdf/P5.pdf"
+    image: "/projects/pr-5.png", // <--- تم التصحيح هنا
+      links: {
+      demo: "/pdf/M5.pdf", // <--- تم التصحيح هنا
+      presentation: "/pdf/P5.pdf" // <--- تم التصحيح هنا
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -78,10 +78,10 @@ export const projects: Project[] = [
     students: ["همام الدوعني", "عمر بن سعد", "عمر الخلاقي", "سعيد بابقي", "سعيد باكيلي", "عديلة الوصابي", "نجاة باحميد ", "بشرى باراس", "أخلاص بن سلمة"],
     supervisor: "د. واثق كعويلة",
     type: "research",
-    image: "public/projects/pr-6.png",
-     links: {
-      demo: "public/pdf/none.jpg",
-      presentation: "public/pdf/none.jpg"
+    image: "/projects/pr-6.png", // <--- تم التصحيح هنا
+      links: {
+      demo: "/pdf/none.jpg", // <--- تم التصحيح هنا
+      presentation: "/pdf/none.jpg" // <--- تم التصحيح هنا
     //github: "public/pdf/EduAi.pptx"
     }
   },
@@ -92,10 +92,10 @@ export const projects: Project[] = [
     students: ["صالح سويدان", "سالم بن عروة", "أنس مزروع", "ناصر حيابك", "صفاء البطاطي", "حنين باجابر", "شهد دنه", "سلمى الصويل"],
     supervisor: "د. واثق كعويلة",
     type: "research",
-    image: "public/projects/pr-7.png",
+    image: "/projects/pr-7.png", // <--- تم التصحيح هنا
       links: {
-      demo: "public/pdf/none.jpg",
-      presentation: "public/pdf/none.jpg"
+      demo: "/pdf/none.jpg", // <--- تم التصحيح هنا
+      presentation: "/pdf/none.jpg" // <--- تم التصحيح هنا
     //github: "public/pdf/EduAi.pptx"
     }
   },
