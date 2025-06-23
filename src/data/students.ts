@@ -381,7 +381,7 @@ export const students: Student[] = [
     name: "سعيد محمد باكيلي",
     email: "none@gmail.com",
     phone: "+967 775 587 052",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702066/stu-00_ceoxa3.jpg",
+    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750721688/IMG_20250624_021139_d61uoi.jpg",
     quote: "التطور في نظم المعلومات يبدأ بالخطوة الأولى، وأنا جاهز لها.",
     skills: ["قابلية التكيف مع التقنيات الجديدة", "الاجتهاد في تطوير المهارات", "العمل بجد في تحليل الأنظمة", "حل المشكلات التقنية البسيطة"],
     graduationProject: "دراسة سلوك المستهلك الحضرمي(مركز فوة التجاري)",
