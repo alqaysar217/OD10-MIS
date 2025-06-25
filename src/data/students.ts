@@ -126,7 +126,7 @@ export const students: Student[] = [
     name: "أحمد خالد الهمس",
     email: "none@gmail.com",
     phone: "+967 775 587 052",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702094/stu-18_xupevt.jpg",
+    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750887351/stu-26_q90zxn.jpg",
     quote: "بكل بساطة، أنا هنا لأقدم المساعدة وأتعلم المزيد في مجال نظم المعلومات.",
     skills: ["دعم المستخدمين", "قابلية التعلم", "التعامل مع أنظمة قواعد البيانات", "المساعدة في تحليل البيانات"],
     graduationProject: "منصة ركن لانشاء المتاجر الالكترونية",
