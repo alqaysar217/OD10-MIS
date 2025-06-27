@@ -9,7 +9,7 @@ const Leaders: React.FC = () => {
 
   return (
     <section id="leaders" ref={leadersRef} className="py-20 bg-gradient-to-br from-slate-50 via-amber-50 to-orange-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
-      <div className="container mx-auto px-4"> {/* px-4 is good, ensures some padding */}
+      <div className="container mx-auto px-4">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -26,8 +26,8 @@ const Leaders: React.FC = () => {
             </p>
           </div>
 
-          {/* Leaders Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Leaders Grid - تعديل مهم هنا: استخدام gap-y-8 وتحديد gap-x-8 من md */}
+          <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-8 lg:grid-cols-4 lg:gap-x-8">
             {leaders.map((leader, index) => (
               <div
                 key={leader.id}
@@ -69,7 +69,7 @@ const Leaders: React.FC = () => {
                     </span>
                   </div>
 
-                  {/* Achievements - ADD break-words HERE */}
+                  {/* Achievements */}
                   <div className="space-y-3">
                     <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 flex items-center">
                       <Trophy size={16} className="ml-2 text-amber-600" />
@@ -81,15 +81,13 @@ const Leaders: React.FC = () => {
                         className="flex items-start space-x-2 space-x-reverse text-sm text-gray-600 dark:text-gray-400"
                       >
                         <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="leading-relaxed break-words">{achievement}</span> {/* Added break-words */}
+                        <span className="leading-relaxed break-words">{achievement}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Hover Effect - Ensure it doesn't cause overflow */}
-                {/* The hover effect itself is fine, but if its content (like text) is too wide it could cause issues.
-                    The current setup with text-center and standard padding should prevent this. */}
+                {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-600/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="text-white text-center w-full">
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
