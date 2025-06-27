@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* هذا الجزء الجديد لمنع التمرير الأفقي غير المرغوب فيه */
+html, body {
+  overflow-x: hidden; /* يمنع ظهور شريط التمرير الأفقي ويقتطع المحتوى الزائد */
+  width: 100%;       /* يضمن أن العرض يمتد على كامل عرض نافذة العرض */
+}
+
 * {
   scroll-behavior: smooth;
 }
