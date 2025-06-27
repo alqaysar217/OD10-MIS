@@ -26,7 +26,7 @@ const Leaders: React.FC = () => {
             </p>
           </div>
 
-          {/* Leaders Grid - تعديل مهم هنا: استخدام gap-y-8 وتحديد gap-x-8 من md */}
+          {/* Leaders Grid */}
           <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-8 lg:grid-cols-4 lg:gap-x-8">
             {leaders.map((leader, index) => (
               <div
@@ -56,8 +56,8 @@ const Leaders: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6">
+                {/* Content - تعديل p-6 إلى p-4 أو px-4 py-6 */}
+                <div className="p-4 sm:p-6"> {/* <--- هذا هو التغيير هنا */}
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-center">
                     {leader.name}
                   </h3>
