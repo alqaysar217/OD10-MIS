@@ -31,7 +31,8 @@ const Leaders: React.FC = () => {
             {leaders.map((leader, index) => (
               <div
                 key={leader.id}
-                className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-6 overflow-hidden border border-gray-100 dark:border-gray-700"
+                // *** هذا هو السطر الذي تم تعديله / يضاف إليه الفئات الجديدة ***
+                className="group relative w-full max-w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-6 overflow-hidden border border-gray-100 dark:border-gray-700"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Crown Badge */}
@@ -56,8 +57,8 @@ const Leaders: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Content - تعديل p-6 إلى p-4 أو px-4 py-6 */}
-                <div className="p-4 sm:p-6"> {/* <--- هذا هو التغيير هنا */}
+                {/* Content */}
+                <div className="p-4 sm:p-6"> {/* تم تعديل الحشو هنا في السابق */}
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-center">
                     {leader.name}
                   </h3>
@@ -81,7 +82,7 @@ const Leaders: React.FC = () => {
                         className="flex items-start space-x-2 space-x-reverse text-sm text-gray-600 dark:text-gray-400"
                       >
                         <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="leading-relaxed break-words">{achievement}</span>
+                        <span className="leading-relaxed break-words">{achievement}</span> {/* تم إضافة break-words في السابق */}
                       </div>
                     ))}
                   </div>
