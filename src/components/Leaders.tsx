@@ -8,7 +8,11 @@ const Leaders: React.FC = () => {
   const isVisible = useIntersectionObserver(leadersRef);
 
   return (
-    <section id="leaders" ref={leadersRef} className="py-20 bg-gradient-to-br from-slate-50 via-amber-50 to-orange-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
+    <section
+      id="leaders"
+      ref={leadersRef}
+      className="py-20 bg-gradient-to-br from-slate-50 via-amber-50 to-orange-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800"
+    >
       <div className="container mx-auto px-4">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           {/* Section Header */}
@@ -17,8 +21,7 @@ const Leaders: React.FC = () => {
               <Crown className="text-white" size={32} />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 font-arabic-serif">
-              أبطال 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600"> الدفعة</span>
+              أبطال <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600"> الدفعة</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto mb-8 rounded-full"></div>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -31,7 +34,6 @@ const Leaders: React.FC = () => {
             {leaders.map((leader, index) => (
               <div
                 key={leader.id}
-                // *** هذا هو السطر الذي تم تعديله / يضاف إليه الفئات الجديدة ***
                 className="group relative w-full max-w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-6 overflow-hidden border border-gray-100 dark:border-gray-700"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
@@ -47,10 +49,10 @@ const Leaders: React.FC = () => {
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 max-w-full"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                  
+
                   {/* Star Decoration */}
                   <div className="absolute top-4 left-4">
                     <Star className="text-yellow-400 fill-current animate-pulse" size={24} />
@@ -58,11 +60,11 @@ const Leaders: React.FC = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-4 sm:p-6"> {/* تم تعديل الحشو هنا في السابق */}
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-center">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-center break-words">
                     {leader.name}
                   </h3>
-                  
+
                   <div className="text-center mb-4">
                     <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-amber-100 to-orange-100 dark:from-amber-900 dark:to-orange-900 text-amber-800 dark:text-amber-200 rounded-full text-sm font-medium shadow-sm">
                       <Award size={16} className="ml-1" />
@@ -82,7 +84,7 @@ const Leaders: React.FC = () => {
                         className="flex items-start space-x-2 space-x-reverse text-sm text-gray-600 dark:text-gray-400"
                       >
                         <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="leading-relaxed break-words">{achievement}</span> {/* تم إضافة break-words في السابق */}
+                        <span className="leading-relaxed break-words">{achievement}</span>
                       </div>
                     ))}
                   </div>

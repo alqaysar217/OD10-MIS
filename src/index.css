@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* هذا الجزء الجديد لمنع التمرير الأفقي غير المرغوب فيه */
+/* ✅ يمنع التمرير الأفقي ويضبط العرض على الجوال */
 html, body {
-  overflow-x: hidden; /* يمنع ظهور شريط التمرير الأفقي ويقتطع المحتوى الزائد */
-  width: 100%;       /* يضمن أن العرض يمتد على كامل عرض نافذة العرض */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 * {
@@ -29,7 +29,7 @@ body {
   .text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
-  
+
   .bg-gradient-radial {
     background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
   }
