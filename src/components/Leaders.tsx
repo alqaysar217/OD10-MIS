@@ -1,164 +1,170 @@
 import React, { useRef } from 'react';
-import { Calendar, MapPin, BookOpen, Target, Trophy, GraduationCap, Users, Award } from 'lucide-react';
+import { Award, Star, Crown, Trophy, Zap, TrendingUp, Users, Lightbulb, Link } from 'lucide-react'; // تم إضافة أيقونات إضافية هنا لتجنب أخطاء Linting في حال استخدامها مستقبلاً
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { timeline } from '../data/timeline';
+import { leaders } from '../data/leaders';
 
-const Timeline: React.FC = () => {
-  const timelineRef = useRef<HTMLElement>(null);
-  const isVisible = useIntersectionObserver(timelineRef);
+const Leaders: React.FC = () => {
+  const leadersRef = useRef<HTMLElement>(null);
+  const isVisible = useIntersectionObserver(leadersRef);
 
-  const getEventIcon = (type: string) => {
+  // تم استرجاع هذه الدوال لضمان عمل المكون بشكل صحيح إذا تم استخدامها
+  const getLeaderIcon = (type: string) => {
     switch (type) {
-      case 'academic': return BookOpen;
-      case 'activity': return Target;
-      case 'achievement': return Trophy;
-      case 'graduation': return GraduationCap;
-      default: return Calendar;
+      case 'team_lead': return Crown;
+      case 'innovator': return Lightbulb;
+      case 'motivator': return Zap;
+      case 'collaborator': return Users;
+      case 'high_achiever': return TrendingUp;
+      default: return Crown;
     }
   };
 
-  const getEventColor = (type: string) => {
+  const getLeaderColor = (type: string) => {
     switch (type) {
-      case 'academic': return 'border-blue-500 bg-blue-500';
-      case 'activity': return 'border-emerald-500 bg-emerald-500';
-      case 'achievement': return 'border-amber-500 bg-amber-500';
-      case 'graduation': return 'border-purple-500 bg-purple-500';
-      default: return 'border-gray-500 bg-gray-500';
+      case 'team_lead': return 'from-yellow-400 to-amber-500';
+      case 'innovator': return 'from-teal-400 to-emerald-500';
+      case 'motivator': return 'from-orange-400 to-red-500';
+      case 'collaborator': return 'from-blue-400 to-indigo-500';
+      case 'high_achiever': return 'from-purple-400 to-pink-500';
+      default: return 'from-gray-400 to-gray-500';
     }
   };
+
 
   return (
-    <section id="timeline" ref={timelineRef} className="py-12 md:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
-      {/* التعديل هنا: تم تغيير px-4 إلى px-2 على الشاشات الصغيرة جداً */}
-      <div className="container mx-auto px-2 sm:px-6 lg:px-8">
+    <section id="leaders" ref={leadersRef} className="py-20 bg-gradient-to-br from-slate-50 via-amber-50 to-orange-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
+      {/* التعديل هنا: تم تغيير px-4 إلى px-2 على الشاشات الصغيرة جداً، وإضافة lg:px-8 لمرونة أكبر */}
+      <div className="container mx-auto px-2 sm:px-4 lg:px-8">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           {/* Section Header */}
-          <div className="text-center mb-12 md:mb-16">
-            <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl mb-4 sm:mb-6 shadow-lg">
-              <Calendar className="text-white w-7 h-7 sm:w-8 sm:h-8" />
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl mb-6 shadow-lg">
+              <Crown className="text-white" size={32} />
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 font-arabic-serif">
-              الخط
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600"> الزمني</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 font-arabic-serif">
+              أبطال 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600"> الدفعة</span>
             </h2>
-            <div className="w-20 md:w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-6 md:mb-8 rounded-full"></div>
-            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
-              رحلة تاريخية عبر أهم المحطات والإنجازات في مسيرة دفعة مطور المنظمة
+            <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto mb-8 rounded-full"></div>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              نجوم ساطعة في سماء دفعة مطور المنظمة، تميزوا بإبداعهم وقيادتهم وإنجازاتهم المتميزة
             </p>
           </div>
 
-          {/* Timeline */}
-          <div className="relative max-w-4xl mx-auto">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-emerald-500 to-purple-500 rounded-full shadow-sm"></div>
-
-            {/* Timeline Events */}
-            <div className="space-y-12 md:space-y-16">
-              {timeline.map((event, index) => {
-                const IconComponent = getEventIcon(event.type);
-                const isEven = index % 2 === 0;
-
+          {/* Leaders Grid */}
+          <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-8 lg:grid-cols-4 lg:gap-x-8">
+            {leaders.map((leader, index) => {
+                const IconComponent = getLeaderIcon(leader.type); // تم استخدام الدالة هنا
                 return (
-                  <div
-                    key={event.id}
-                    className={`relative flex flex-col items-center md:flex-row md:items-stretch
-                                  ${isEven ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+                <div
+                    key={leader.id}
+                    className="group relative w-full max-w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-6 overflow-hidden border border-gray-100 dark:border-gray-700"
                     style={{ animationDelay: `${index * 0.2}s` }}
-                  >
-                    {/* Event Content Card */}
-                    {/* تم إزالة p-2 هنا، وترك md:p-0 */}
-                    <div className={`w-full md:w-5/12 md:p-0 ${isEven ? 'md:text-left' : 'md:text-right'}`}>
-                      {/* تم تغيير p-6 إلى p-4 على الشاشات الصغيرة، مع الحفاظ على sm:p-6 و md:p-8 */}
-                      <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 hover:shadow-2xl transition-all duration-500 transform md:hover:-translate-y-3 border border-gray-100 dark:border-gray-700">
-                        {/* Date */}
-                        <div className="flex items-center mb-3 sm:mb-4">
-                          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900 rounded-xl flex items-center justify-center ml-2 sm:ml-3">
-                            <Calendar className="text-blue-600 dark:text-blue-400 w-4 h-4 sm:w-5 sm:h-5" />
-                          </div>
-                          <span className="text-blue-600 dark:text-blue-400 font-bold text-base sm:text-lg">
-                            {event.date}
-                          </span>
-                        </div>
-
-                        {/* Title */}
-                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 leading-tight">
-                          {event.title}
-                        </h3>
-
-                        {/* Description */}
-                        <p className="text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-                          {event.description}
-                        </p>
-
-                        {/* Image */}
-                        <div className="rounded-xl overflow-hidden shadow-lg w-full">
-                          <img
-                            src={event.image}
-                            alt={event.title}
-                            className="w-full h-32 sm:h-40 object-cover hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-                      </div>
+                >
+                    {/* Crown Badge */}
+                    <div className="absolute top-4 right-4 z-10">
+                    <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center text-white shadow-lg">
+                        <Crown size={20} />
+                    </div>
                     </div>
 
-                    {/* Timeline Node (The circle with icon) */}
-                    <div className="absolute top-0 md:static transform -translate-y-1/2 md:translate-y-0
-                                  left-1/2 -translate-x-1/2 md:translate-x-0
-                                  flex items-center justify-center z-10
-                                  md:w-auto md:mx-4 lg:mx-6">
-                      <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full border-4 ${getEventColor(event.type)} flex items-center justify-center z-10 shadow-lg hover:scale-110 transition-transform duration-300`}>
-                        <IconComponent className="text-white w-5 h-5 sm:w-6 sm:h-6" />
-                      </div>
+                    {/* Leader Image */}
+                    <div className="relative h-64 overflow-hidden">
+                    <img
+                        src={leader.image}
+                        alt={leader.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    
+                    {/* Star Decoration */}
+                    <div className="absolute top-4 left-4">
+                        <Star className="text-yellow-400 fill-current animate-pulse" size={24} />
+                    </div>
                     </div>
 
-                    {/* Empty Space on Desktop for Alternating Layout */}
-                    <div className="hidden md:block w-5/12"></div>
-                  </div>
+                    {/* Content */}
+                    <div className="p-4 sm:p-6">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 text-center">
+                        {leader.name}
+                    </h3>
+                    
+                    <div className="text-center mb-4">
+                        <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-amber-100 to-orange-100 dark:from-amber-900 dark:to-orange-900 text-amber-800 dark:text-amber-200 rounded-full text-sm font-medium shadow-sm">
+                        <Award size={16} className="ml-1" />
+                        {leader.role}
+                        </span>
+                    </div>
+
+                    {/* Achievements */}
+                    <div className="space-y-3">
+                        <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3 flex items-center">
+                        <Trophy size={16} className="ml-2 text-amber-600" />
+                        الإنجازات:
+                        </h4>
+                        {leader.achievements.map((achievement, achievementIndex) => (
+                        <div
+                            key={achievementIndex}
+                            className="flex items-start space-x-2 space-x-reverse text-sm text-gray-600 dark:text-gray-400"
+                        >
+                            <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <span className="leading-relaxed break-words">{achievement}</span>
+                        </div>
+                        ))}
+                    </div>
+                    </div>
+
+                    {/* Hover Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-amber-600/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div className="text-white text-center w-full">
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Crown className="text-white" size={24} />
+                        </div>
+                        <h3 className="text-lg font-bold mb-1">{leader.name}</h3>
+                        <p className="text-sm opacity-90">{leader.role}</p>
+                    </div>
+                    </div>
+                </div>
                 );
-              })}
-            </div>
-
-            {/* Timeline End */}
-            <div className="relative flex justify-center mt-12 md:mt-16">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center shadow-xl">
-                <Target className="text-white w-8 h-8 sm:w-9 h-9" />
-              </div>
-            </div>
+            })}
           </div>
 
-          {/* Future Goals */}
-          <div className="mt-16 md:mt-20 text-center">
-            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 dark:border-gray-700">
-              <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl mb-4 sm:mb-6 shadow-lg">
-                <Target className="text-white w-7 h-7 sm:w-8 sm:h-8" />
+          {/* Recognition Section */}
+          <div className="mt-20">
+            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-3xl p-10 text-center shadow-xl border border-gray-100 dark:border-gray-700">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl mb-6 shadow-lg">
+                <Star className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 font-arabic-serif">
-                نحو آفاق أوسع
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 font-arabic-serif">
+                تقدير واعتراف
               </h3>
-              <p className="text-base sm:text-xl text-gray-600 dark:text-gray-300 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto px-2">
-                رحلتنا لم تنته بعد... نتطلع إلى مستقبل مشرق مليء بالإنجازات والنجاحات
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
+                كل فرد في دفعة مطور المنظمة هو بطل بطريقته الخاصة
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-                <div className="text-center p-4 sm:p-6 bg-white/50 dark:bg-gray-700/50 rounded-2xl backdrop-blur-sm border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
-                    <Users className="text-white w-6 h-6 sm:w-7 sm:h-7" />
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="text-center p-6 bg-white/50 dark:bg-gray-700/50 rounded-2xl backdrop-blur-sm border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <Trophy className="text-white" size={28} />
                   </div>
-                  <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">فرص العمل</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">الانطلاق في مسيرة مهنية ناجحة</p>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">التميز الأكاديمي</div>
                 </div>
-                <div className="text-center p-4 sm:p-6 bg-white/50 dark:bg-gray-700/50 rounded-2xl backdrop-blur-sm border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
-                    <Award className="text-white w-6 h-6 sm:w-7 sm:h-7" />
+                <div className="text-center p-6 bg-white/50 dark:bg-gray-700/50 rounded-2xl backdrop-blur-sm border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <Award className="text-white" size={28} />
                   </div>
-                  <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">الريادة</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">بناء مشاريع ريادية مبتكرة</p>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">العمل الجماعي</div>
                 </div>
-                <div className="text-center p-4 sm:p-6 bg-white/50 dark:bg-gray-700/50 rounded-2xl backdrop-blur-sm border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
-                    <Target className="text-white w-6 h-6 sm:w-7 sm:h-7" />
+                <div className="text-center p-6 bg-white/50 dark:bg-gray-700/50 rounded-2xl backdrop-blur-sm border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <Star className="text-white" size={28} />
                   </div>
-                  <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">التواصل</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">البقاء على تواصل كعائلة واحدة</p>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">الإبداع والابتكار</div>
+                </div>
+                <div className="text-center p-6 bg-white/50 dark:bg-gray-700/50 rounded-2xl backdrop-blur-sm border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <Crown className="text-white" size={28} />
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">تحقيق الأهداف</div>
                 </div>
               </div>
             </div>
@@ -169,4 +175,4 @@ const Timeline: React.FC = () => {
   );
 };
 
-export default Timeline;
+export default Leaders;
