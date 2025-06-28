@@ -1,3 +1,5 @@
+// src/types/index.ts (اسم الملف المقترح)
+
 export interface Student {
   id: number;
   name: string;
@@ -54,4 +56,6 @@ export interface Leader {
   image: string;
   achievements: string[];
   badge: string;
+  // تم إضافة هذه الخاصية لتحديد نوع القائد المستخدم في دالة getLeaderIcon
+  type: 'team_lead' | 'innovator' | 'motivator' | 'collaborator' | 'high_achiever';
 }
