@@ -29,7 +29,8 @@ const Timeline: React.FC = () => {
 
   return (
     <section id="timeline" ref={timelineRef} className="py-12 md:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* التعديل هنا: تم تغيير px-4 إلى px-2 على الشاشات الصغيرة جداً */}
+      <div className="container mx-auto px-2 sm:px-6 lg:px-8">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           {/* Section Header */}
           <div className="text-center mb-12 md:mb-16">
@@ -65,9 +66,9 @@ const Timeline: React.FC = () => {
                     style={{ animationDelay: `${index * 0.2}s` }}
                   >
                     {/* Event Content Card */}
-                    {/* التعديل الأول: إزالة p-2 من هذه الحاوية لتقليل الحشو على الشاشات الصغيرة جداً */}
+                    {/* تم إزالة p-2 هنا، وترك md:p-0 */}
                     <div className={`w-full md:w-5/12 md:p-0 ${isEven ? 'md:text-left' : 'md:text-right'}`}>
-                      {/* التعديل الثاني: تقليل p-6 إلى p-4 على الشاشات الصغيرة جداً داخل البطاقة نفسها */}
+                      {/* تم تغيير p-6 إلى p-4 على الشاشات الصغيرة، مع الحفاظ على sm:p-6 و md:p-8 */}
                       <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 hover:shadow-2xl transition-all duration-500 transform md:hover:-translate-y-3 border border-gray-100 dark:border-gray-700">
                         {/* Date */}
                         <div className="flex items-center mb-3 sm:mb-4">
