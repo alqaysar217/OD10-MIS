@@ -35,8 +35,7 @@ const Leaders: React.FC = () => {
     <section id="leaders" ref={leadersRef} className="py-20 bg-gradient-to-br from-slate-50 via-amber-50 to-orange-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
       {/* التعديل هنا: تم تغيير px-4 إلى px-2 على الشاشات الصغيرة جداً، وإضافة lg:px-8 لمرونة أكبر */}
       <div className="container mx-auto px-2 sm:px-4 lg:px-8">
-        <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-          {/* Section Header */}
+<div className={`transition-all duration-1000 animate-fade-in`}> {/* أو حتى قم بإزالة التحريك بالكامل مؤقتاً */}          {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl mb-6 shadow-lg">
               <Crown className="text-white" size={32} />
