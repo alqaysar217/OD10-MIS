@@ -33,9 +33,8 @@ const Timeline: React.FC = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           {/* Section Header */}
           <div className="text-center mb-12 md:mb-16">
-            {/* CORRECTED: Icon size adjusted by parent div's size, not directly on icon */}
             <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl mb-4 sm:mb-6 shadow-lg">
-              <Calendar className="text-white w-7 h-7 sm:w-8 sm:h-8" /> {/* Use w- and h- classes for responsive sizing */}
+              <Calendar className="text-white w-7 h-7 sm:w-8 sm:h-8" />
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 font-arabic-serif">
               الخط
@@ -66,13 +65,14 @@ const Timeline: React.FC = () => {
                     style={{ animationDelay: `${index * 0.2}s` }}
                   >
                     {/* Event Content Card */}
-                    <div className={`w-full md:w-5/12 p-2 md:p-0 ${isEven ? 'md:text-left' : 'md:text-right'}`}>
-                      <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-500 transform md:hover:-translate-y-3 border border-gray-100 dark:border-gray-700">
+                    {/* التعديل الأول: إزالة p-2 من هذه الحاوية لتقليل الحشو على الشاشات الصغيرة جداً */}
+                    <div className={`w-full md:w-5/12 md:p-0 ${isEven ? 'md:text-left' : 'md:text-right'}`}>
+                      {/* التعديل الثاني: تقليل p-6 إلى p-4 على الشاشات الصغيرة جداً داخل البطاقة نفسها */}
+                      <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 hover:shadow-2xl transition-all duration-500 transform md:hover:-translate-y-3 border border-gray-100 dark:border-gray-700">
                         {/* Date */}
                         <div className="flex items-center mb-3 sm:mb-4">
-                          {/* CORRECTED: Icon size adjusted by parent div's size, not directly on icon */}
                           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900 rounded-xl flex items-center justify-center ml-2 sm:ml-3">
-                            <Calendar className="text-blue-600 dark:text-blue-400 w-4 h-4 sm:w-5 sm:h-5" /> {/* Use w- and h- classes for responsive sizing */}
+                            <Calendar className="text-blue-600 dark:text-blue-400 w-4 h-4 sm:w-5 sm:h-5" />
                           </div>
                           <span className="text-blue-600 dark:text-blue-400 font-bold text-base sm:text-lg">
                             {event.date}
@@ -101,13 +101,12 @@ const Timeline: React.FC = () => {
                     </div>
 
                     {/* Timeline Node (The circle with icon) */}
-                    {/* CORRECTED: Icon size adjusted by parent div's size, not directly on icon */}
                     <div className="absolute top-0 md:static transform -translate-y-1/2 md:translate-y-0
-                                    left-1/2 -translate-x-1/2 md:translate-x-0
-                                    flex items-center justify-center z-10
-                                    md:w-auto md:mx-4 lg:mx-6">
+                                  left-1/2 -translate-x-1/2 md:translate-x-0
+                                  flex items-center justify-center z-10
+                                  md:w-auto md:mx-4 lg:mx-6">
                       <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full border-4 ${getEventColor(event.type)} flex items-center justify-center z-10 shadow-lg hover:scale-110 transition-transform duration-300`}>
-                        <IconComponent className="text-white w-5 h-5 sm:w-6 sm:h-6" /> {/* Use w- and h- classes for responsive sizing */}
+                        <IconComponent className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                     </div>
 
@@ -120,9 +119,8 @@ const Timeline: React.FC = () => {
 
             {/* Timeline End */}
             <div className="relative flex justify-center mt-12 md:mt-16">
-              {/* CORRECTED: Icon size adjusted by parent div's size, not directly on icon */}
               <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center shadow-xl">
-                <Target className="text-white w-8 h-8 sm:w-9 h-9" /> {/* Use w- and h- classes for responsive sizing */}
+                <Target className="text-white w-8 h-8 sm:w-9 h-9" />
               </div>
             </div>
           </div>
@@ -130,9 +128,8 @@ const Timeline: React.FC = () => {
           {/* Future Goals */}
           <div className="mt-16 md:mt-20 text-center">
             <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 dark:border-gray-700">
-              {/* CORRECTED: Icon size adjusted by parent div's size, not directly on icon */}
               <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl mb-4 sm:mb-6 shadow-lg">
-                <Target className="text-white w-7 h-7 sm:w-8 sm:h-8" /> {/* Use w- and h- classes for responsive sizing */}
+                <Target className="text-white w-7 h-7 sm:w-8 sm:h-8" />
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 font-arabic-serif">
                 نحو آفاق أوسع
@@ -142,15 +139,13 @@ const Timeline: React.FC = () => {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
                 <div className="text-center p-4 sm:p-6 bg-white/50 dark:bg-gray-700/50 rounded-2xl backdrop-blur-sm border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
-                  {/* CORRECTED: Icon size adjusted by parent div's size, not directly on icon */}
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
-                    <Users className="text-white w-6 h-6 sm:w-7 sm:h-7" /> {/* Use w- and h- classes for responsive sizing */}
+                    <Users className="text-white w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
                   <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">فرص العمل</h4>
                   <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">الانطلاق في مسيرة مهنية ناجحة</p>
                 </div>
                 <div className="text-center p-4 sm:p-6 bg-white/50 dark:bg-gray-700/50 rounded-2xl backdrop-blur-sm border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
-                  {/* CORRECTED: Icon size adjusted by parent div's size, not directly on icon */}
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
                     <Award className="text-white w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
@@ -158,7 +153,6 @@ const Timeline: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">بناء مشاريع ريادية مبتكرة</p>
                 </div>
                 <div className="text-center p-4 sm:p-6 bg-white/50 dark:bg-gray-700/50 rounded-2xl backdrop-blur-sm border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
-                  {/* CORRECTED: Icon size adjusted by parent div's size, not directly on icon */}
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
                     <Target className="text-white w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
