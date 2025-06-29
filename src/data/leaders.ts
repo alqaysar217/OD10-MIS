@@ -136,7 +136,7 @@ export const leaders: Leader[] = [
   {
     id: 11,
     name: "عمر العكبري",
-    role: "شنكنيني الدفعة",
+    role: "شخصية مهمة",
     image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701657/dev-8_nrbvbh.png",
     achievements: [
       "القدرة على إنهاء المواد الدراسية في اللحظات الأخيرة",
