@@ -111,7 +111,7 @@ export const students: Student[] = [
     name: "عمر سليمان العكبري",
     email: "o.akbari305@gmail.com",
     phone: "+967 735 851 879 ",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702091/stu-17_ttrnxp.jpg",
+    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1751908200/IMG-mckou8mb_b4mg8v.jpg",
     quote: "لا شيء مستحيل أمام الإصرار في تطوير نظم المعلومات.",
     skills: ["إدارة الوقت في المشاريع التقنية", "حل المشكلات التقنية الطارئة", "التكيف مع التحديات التكنولوجية", "بناء فرق عمل نظم المعلومات", "التفكير الإبداعي"],
     graduationProject: "منصة ركن لانشاء المتاجر الالكترونية",
