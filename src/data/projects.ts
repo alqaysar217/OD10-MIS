@@ -8,7 +8,7 @@ export const projects: Project[] = [
     students: ["محمود حساني", "وليد بن قبوس", "سلطان باهبري", "محمد الهندي", "ندى العمودي", "عائشة باعشن", "فاتن بن سميدع"],
     supervisor: "د. فائز بازنبور",
     type: "mobile",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702012/pr-1_hzxv7o.png",
+    image: "../projects/pr-1.png",
     links: {
       demo: "https://drive.google.com/uc?export=view&id=1bqgFfVfKn4AV9tedICdXNuhhid9Zs28_",
       presentation: "https://drive.google.com/uc?export=view&id=1joArncnSiZPtYCM6KicM8OrzL8o28i5W"
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     students: ["عبدالله بامسعود", "مشعل العمودي", "بركات الوهيبي", "عمر العكبري", "أحمد الهمس", "صفاء باذيب", "جواهر بن ركيز", "هية عوشان"],
     supervisor: "د. عصام باسليمان",
     type: "web",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702044/pr-2_nmmont.png",
+    image: "../projects/pr-2.png",
      links: {
       demo: "https://drive.google.com/uc?export=view&id=1RSBk1ZzWuw9k9qF_VddvE43DnFhWeaNQ",
       presentation: "https://drive.google.com/file/d/1oIV1WoYG4D_MlRGplPjKwJVvM8Pu5yW6/view?usp=drive_link"
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     students: ["نظمي باظروس", "محمد بن كوير", "عائض بن ماخش", "أحمد التميمي", "محمد صالح", "ريناد باراس", "مريم بن هامل"],
     supervisor: "د. فايز بازنبور",
     type: "desktop",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702103/pr-3_dosxvr.png",
+    image: "../projects/pr-3.png",
       links: {
       demo: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg",
       presentation: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpgg"
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     students: ["أحمد بامدحج", "أحمد شوالة", "مروان بن سهيلان", "أمواج النهدي", "أمل الملاح", "أحلام النهدي", "سلمى حمدان", "رهف العمودي"],
     supervisor: "د. عصام باسليمان",
     type: "web",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702053/pr-4_cfiimd.png",
+    image: "../projects/pr-4.png",
       links: {
       demo: "https://drive.google.com/uc?export=view&id=1ohvWLvbnC9q0SptLY2_Nu1o2LVDWVmzK",
       presentation: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg"
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     students: ["أماني يعقوب", "حنين بن عتيق", "خديجة حسينون", "تسنيم عريض", "شيماء بامحفوظ"],
     supervisor: "د. فائز بازنبور",
     type: "research",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702082/pr-5_ynv0yy.png",
+    image: "../projects/pr-5.png",
      links: {
       demo: "https://drive.google.com/file/d/1QDPPX-yTslU_H6qDzuShwgtVUumVBC96/view?usp=drive_link",
       presentation: "https://drive.google.com/file/d/1rOpe2HpsqWuIC1W61DWtbp6Z_HLXi5AK/view?usp=drive_link"
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     students: ["همام الدوعني", "عمر بن سعد", "عمر الخلاقي", "سعيد بابقي", "سعيد باكيلي", "عديلة الوصابي", "نجاة باحميد ", "بشرى باراس", "أخلاص بن سلمة"],
     supervisor: "د. واثق كعويلة",
     type: "research",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702172/pr-6_ctoc8t.png",
+    image: "../projects/pr-6.png",
      links: {
       demo: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg",
       presentation: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg"
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     students: ["صالح سويدان", "سالم بن عروة", "أنس مزروع", "ناصر حيابك", "صفاء البطاطي", "حنين باجابر", "شهد دنه", "سلمى الصويل"],
     supervisor: "د. واثق كعويلة",
     type: "research",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750702183/pr-7_y1qhwe.png",
+    image: "../projects/pr-7.png",
       links: {
       demo: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg",
       presentation: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701691/none_xpuuwc.jpg"

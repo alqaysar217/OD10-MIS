@@ -7,7 +7,7 @@ export const leaders: Leader[] = [
     id: 1,
     name: "عديلة الوصابي",
     role: "الأولى على الدفعة",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701215/female-13_vzajdh.png",
+    image: "../aftar/female-13.png",
     achievements: [
       "المتفوقة دراسيًا في جميع الفصول",
       "المساهمة الفعّالة في اللجان العلمية والأنشطة",
@@ -20,7 +20,7 @@ export const leaders: Leader[] = [
     id: 2,
     name: "أحمد بامدحج",
     role: "مندوب وقائد الدفعة",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701650/dev-2_bgxiki.png",
+    image: "../leaders/dev-2.png",
     achievements: [
       "تنسيق الجداول والفعاليات والامتحانات",
       "تنظيم النزولات الميدانية للدفعة",
@@ -33,7 +33,7 @@ export const leaders: Leader[] = [
     id: 3,
     name: "محمود حساني",
     role: "المبرمج التقني (القيصر)",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701648/2_sjumdz.png",
+    image: "../leaders/2.png",
     achievements: [
       "إنشاء مشاريع برمجية ومنصات متقدمة",
       "تقديم دورات تدريبية وشروحات للطلاب",
@@ -46,7 +46,7 @@ export const leaders: Leader[] = [
     id: 4,
     name: "مشعل العمودي",
     role: "مخرج وإعلامي الدفعة",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701652/dev-3_npsrb9.png",
+    image: "../leaders/dev-3.png",
     achievements: [
       "إخراج وتصوير مقاطع احترافية للدفعة",
       "إدارة حسابات الدفعة على وسائل التواصل",
@@ -59,7 +59,7 @@ export const leaders: Leader[] = [
     id: 5,
     name: "عائض بن ماخش",
     role: "نائب رئيس المجلس الطلابي",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701646/dev-11_sdlihr.png",
+    image: "../leaders/dev-11.png",
     achievements: [
       "المساهمة في مشروع التخرج بالذكاء الاصطناعي (موسيقى تصويرية)",
       "المعرفة بإنشاء الأفلام بالذكاء الاصطناعي",
@@ -72,7 +72,7 @@ export const leaders: Leader[] = [
     id: 6,
     name: "عبدالله بامسعود",
     role: "قائد اللجنة المالية والتخرج",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701651/dev-4_tvtoqy.png",
+    image: "../leaders/dev-4.png",
     achievements: [
       "إدارة الأمور المالية للدفعة وجمع مبالغ التخرج",
       "تقديم تقارير مالية دقيقة وواضحة",
@@ -85,7 +85,7 @@ export const leaders: Leader[] = [
     id: 7,
     name: "صفاء باذيب",
     role: "الحجر الأساس (منسقة المهام)",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701317/female-17_uqtb6q.png",
+    image: "../aftar/female-17.png",
     achievements: [
       "التواصل الممتاز مع المدرسين وإدارة المهام الشاملة",
       "القيادة الفعّالة للفريق وتنسيق الجهود",
@@ -98,7 +98,7 @@ export const leaders: Leader[] = [
     id: 8,
     name: "عائشة باعشن",
     role: "عضو الأنشطة والتنسيق",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701534/female-3_vg3inz.png",
+    image: "../aftar/female-3.png",
     achievements: [
       "تنسيق وتنظيم الحفلات وتجهيز الأغراض",
       "دعم وتجهيز التوزيعات والهدايا للنزولات الميدانية",
@@ -111,7 +111,7 @@ export const leaders: Leader[] = [
     id: 9,
     name: "وليد بن قبوس",
     role: "محلل الدفعة (الشرس)",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701653/dev-6_rd3er5.png",
+    image: "../leaders/dev-6.png",
     achievements: [
       "تحليل الأعمال والمهام الصعبة بذكاء",
       "الاعتماد على الذكاء الاصطناعي لإنجاز المهام",
@@ -124,7 +124,7 @@ export const leaders: Leader[] = [
     id: 10,
     name: "مروان بن سهيلان",
     role: "كوميدي الدفعة",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701653/dev-7_exaxig.png",
+    image: "../leaders/dev-7.png",
     achievements: [
       "نشر البهجة والأمل بضحكته المميزة",
       "التعامل مع الأمور بيسر وهدوء",
@@ -137,7 +137,7 @@ export const leaders: Leader[] = [
     id: 11,
     name: "عمر العكبري",
     role: "شخصية مهمة",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1751908200/IMG-mckpgubt_kkedji.jpg",
+    image: "../leaders/IMG-mckpgubt.jpg",
     achievements: [
       "القدرة على إنهاء المواد الدراسية في اللحظات الأخيرة",
       "نقطة توازن الدفعة وروحها المرحة",
@@ -150,7 +150,7 @@ export const leaders: Leader[] = [
     id: 12,
     name: "محمد الهندي",
     role: "جوجل الخاص بالدفعة",
-    image: "https://res.cloudinary.com/ddayx3vdf/image/upload/v1750701655/dev-9_kuhbtn.png",
+    image: "../leaders/dev-9.png",
     achievements: [
       "القدرة على استيعاب المفاهيم الحسابية والبرمجية بسرعة",
       "إيجاد الحلول الذكية في الاختبارات",
